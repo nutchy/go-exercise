@@ -1,4 +1,4 @@
-package main
+package exercise_1
 
 import "fmt"
 
@@ -7,5 +7,5 @@ func main() {
 	x := 123
 	fmt.Printf("Decimal: %d \n", x)
 	fmt.Printf("Binary: %b \n", x)
-	fmt.Printf("Hex: %#X \n", x)
+	fmt.Printf("Hex: %#x \n", x)
 }
