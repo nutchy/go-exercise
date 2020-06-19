@@ -2,13 +2,14 @@ package main
 
 import "fmt"
 
-// Build and use an annonymous func
-
+// Assign a func to a variable, then call it
 func main() {
-	func() {
+	fn := func() {
 		for i := 0; i < 100; i++ {
 			fmt.Println(i)
 		}
-	}()
+	}
+	fn()
 	fmt.Println("Done")
+
 }
