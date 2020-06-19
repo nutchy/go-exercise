@@ -41,12 +41,12 @@ func info(s shape) {
 
 func main() {
 	c := circle{
-		radius: 20,
+		radius: 12.345,
 	}
 
 	s := square{
-		width:  4,
-		height: 6,
+		width:  15,
+		height: 15,
 	}
 
 	info(c)
