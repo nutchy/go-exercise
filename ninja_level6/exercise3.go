@@ -16,7 +16,6 @@ func bar() {
 }
 
 func main() {
-
 	// defer will execute bottom up (Stack)
 	defer foo()
 	defer bar()
