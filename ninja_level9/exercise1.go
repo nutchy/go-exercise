@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"sync"
 )
 
@@ -10,6 +11,8 @@ import (
 // use waitgroups to make sure each goroutine finishes before your program exists
 
 func main() {
+	fmt.Println("Number of CPUs:", runtime.NumCPU())
+	fmt.Println("Number of Go Routines:", runtime.NumGoroutine())
 
 	var wg sync.WaitGroup
 
@@ -25,6 +28,10 @@ func main() {
 		wg.Done()
 	}()
 
+	fmt.Println("Number of CPUs before run go routine:", runtime.NumCPU())
+	fmt.Println("Number of Go Routines  before run go routine:", runtime.NumGoroutine())
 	// Waiting until all wait group done (2 goroutine)
 	wg.Wait()
+	fmt.Println("Number of CPUs after run go routine:", runtime.NumCPU())
+	fmt.Println("Number of Go Routines  after run go routine:", runtime.NumGoroutine())
 }
